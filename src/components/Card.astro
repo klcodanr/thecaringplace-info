@@ -1,21 +1,21 @@
 ---
-
+const { width } = Astro.props;
 ---
 
 <div class="card">
   <slot />
 </div>
 
-<style>
+<style define:vars={{ width }}>
   .card {
     padding: 1em;
-    margin: 1em;
     border-radius: 5px;
     box-shadow: 0 1px 2px 0 var(--grey);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.1em;
+    gap: 0.5em;
     text-align: center;
+    width: var(--width, 'default')
   }
 </style>

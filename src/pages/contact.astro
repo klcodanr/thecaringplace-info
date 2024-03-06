@@ -1,88 +1,28 @@
 ---
-import Button from "../components/Button.astro";
+import ContactForm from "../components/ContactForm.astro";
 import Content from "../layouts/Content.astro";
+import Map from "../components/Map.astro";
 const pageTitle = "Contact Us";
 ---
 
 <Content pageTitle={pageTitle}>
   <h1>Contact the Caring Place</h1>
-  <form method="post" data-netlify="true">
-    <div class="field-group">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required />
-    </div>
+  <section>
+    <ContactForm />
+    <p>
+      Sharifah Tafari – Executive Director
+      <br />
+      Phone: <a href="tel:513-841-1499">513-841-1499</a>
+    </p>
+  </section>
 
-    <div class="field-group">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required />
-    </div>
-
-    <div class="field-group">
-      <label for="subject">Subject</label>
-      <select id="subject" name="subject" required>
-        <option value="help">Get Help</option>
-        <option value="question">Question</option>
-        <option value="volunteer">Volunteer</option>
-        <option value="donation">Donation</option>
-        <option value="other">Other</option>
-      </select>
-    </div>
-
-    <div class="field-group">
-      <label for="message">Message</label>
-      <textarea id="message" name="message" required></textarea>
-    </div>
-
-    <div class="field-group">
-      <button type="submit" class="button button-blue">Submit</button>
-    </div>
-  </form>
+  <section>
+    <h2>Find the Caring Place</h2>
+    <Map />
+    <p>
+      5950 Montgomery Rd<br /> Cincinnati, OH 45213<br /><em
+        >Access from the parking lot of the Pleasant Ridge Presbyterian Church</em
+      >
+    </p>
+  </section>
 </Content>
-
-<style>
-  form {
-    padding: 1em;
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    width: 50vw;
-  }
-
-  label:has(+ input:required):after,
-  label:has(+ select:required):after,
-  label:has(+ textarea:required):after {
-    content: " *";
-    color: var(--red);
-  }
-
-  .field-group {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .field-group label {
-    flex: 1;
-  }
-
-  .field-group input,
-  .field-group select,
-  .field-group textarea {
-    flex: 3;
-  }
-
-  select,
-  textarea,
-  input {
-    border: 1px solid var(--grey);
-    border-radius: 0.5em;
-    padding: 0.25em;
-  }
-
-  label:invalid,
-  textarea:invalid,
-  input:invalid {
-    border: 1px solid var(--red);
-    color: var(--red);
-  }
-</style>
