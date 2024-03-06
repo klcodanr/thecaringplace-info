@@ -6,7 +6,7 @@ const pageTitle = "Contact Us";
 
 <Content pageTitle={pageTitle}>
   <h1>Contact the Caring Place</h1>
-  <form>
+  <form method="post" data-netlify="true">
     <div class="field-group">
       <label for="name">Name</label>
       <input type="text" id="name" name="name" required />
@@ -34,7 +34,7 @@ const pageTitle = "Contact Us";
     </div>
 
     <div class="field-group">
-      <button type="submit">Submit</button>
+      <button type="submit" class="button button-blue">Submit</button>
     </div>
   </form>
 </Content>

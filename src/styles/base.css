@@ -52,6 +52,31 @@ aside {
   padding: 0 1em;
 }
 
+.button {
+  text-decoration: none;
+  padding: 0.5em 0.75em;
+  border-radius: 4px;
+  display: inline-block;
+  min-width: 5em;
+  text-align: center;
+  margin: 0.5em;
+  border: none;
+}
+
+.button:hover {
+  filter: brightness(85%);
+}
+
+.button-white {
+  color: var(--grey);
+  background-color: var(--text-over-color);
+}
+
+.button-blue {
+  color: var(--text-over-color);
+  background-color: var(--blue);
+}
+
 section {
   padding: 2em 0;
 }
