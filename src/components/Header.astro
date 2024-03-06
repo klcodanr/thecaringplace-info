@@ -1,0 +1,50 @@
+---
+import Button from "./Button.astro";
+import { Image } from "astro:assets";
+import logo from "../images/logo.png";
+---
+
+<header>
+  <aside>
+    <div class="header-content">
+      <div class="header-logo">
+        <a href="/">
+          <Image src={logo} alt="The Caring Place" loading="eager" />
+        </a>
+      </div>
+      <nav>
+        <Button link="/pantry" variant="white">Food Pantry</Button>
+        <Button link="/about" variant="white">About</Button>
+        <Button link="/volunteer" variant="white">Volunteer</Button>
+        <Button link="/contact" variant="white">Contact</Button>
+      </nav>
+    </div>
+  </aside>
+</header>
+<style>
+  header {
+    padding: 20px 0;
+    box-shadow: 0 2px 2px 0 var(--grey);
+  }
+
+  .header-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav a,
+  nav a:hover,
+  nav a:visited {
+    color: #333;
+    text-decoration: none;
+    padding: 1em;
+    border-radius: 4px;
+    display: inline-block;
+  }
+
+  nav a:hover {
+    background-color: #f5f5f5;
+  }
+</style>

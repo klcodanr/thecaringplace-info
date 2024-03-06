@@ -1,0 +1,23 @@
+---
+import { Image } from "astro:assets";
+import logo from "../images/logo.png";
+---
+
+<footer>
+  <aside>
+    <Image src={logo} alt="The Caring Place" />
+    <p>&copy; 2024 The Caring Place</p>
+  </aside>
+</footer>
+<style>
+  footer {
+    background-color: var(--blue);
+    color: var(--text-over-color);
+    margin-top: 2em;
+    padding: 2em 0;
+    margin-top: auto;
+  }
+  p {
+    text-align: center;
+  }
+</style>

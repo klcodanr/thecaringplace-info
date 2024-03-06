@@ -1,0 +1,103 @@
+---
+import Content from "../layouts/Content.astro";
+import Column from "../components/Column.astro";
+import Columns from "../components/Columns.astro";
+import { Image } from "astro:assets";
+import pantryImage from "../images/pantry.png";
+const pageTitle = "About Us";
+---
+
+<Content pageTitle={pageTitle}>
+  <Columns>
+    <Column>
+      <h1>About Us</h1>
+      <p>
+        The Caring Place was established in 1982 by a coalition of churches
+        serving Golf Manor, Kennedy Heights, Pleasant Ridge, and Silverton. Our
+        goal is to provide a variety of services to members of our communities
+        who find themselves in need of food, clothing, furniture, rent and
+        utility assistance, family development and support groups.
+      </p>
+      <p>
+        Volunteers primarily come from participating churches and local schools
+        including Nativity School, Seven Hills Academy, and Schroder Paideia
+        High School.
+      </p>
+    </Column>
+    <Column>
+      <Image src={pantryImage} alt="The food pantry" />
+    </Column>
+  </Columns>
+  <h2>Board Members</h2>
+  <p>
+    The Caring Place board is made up of two representatives from each of the
+    local member churches along with the director.
+  </p>
+
+  <h2>Supporting Churches</h2>
+  <ul>
+    <li>
+      <a
+        href="https://www.allsaintscincinnati.org/"
+        target="_blank"
+        rel="noopener">All Saints Episcopal Church</a
+      >
+    </li><li>Fellowship of Jesus Christ</li><li>
+      <a
+        href="https://www.facebook.com/First-Baptist-Church-Of-Kennedy-Heights-575428982495323/"
+        target="_blank"
+        rel="noopener">First Baptist Church of Kennedy Heights</a
+      >
+    </li><li>
+      <a href="https://www.fbcoakley.org/" target="_blank" rel="noopener"
+        >First Baptist Church of Oakley</a
+      >
+    </li><li>
+      <a href="https://khpc.org/" target="_blank" rel="noopener"
+        >Kennedy Heights Presbyterian Church</a
+      >
+    </li><li>
+      <a
+        href="https://www.nativity-cincinnati.org/"
+        target="_blank"
+        rel="noopener">Nativity of Our Lord Catholic Church</a
+      >
+    </li><li>
+      <a href="https://prpc.org/" target="_blank" rel="noopener"
+        >Pleasant Ridge Presbyterian Church</a
+      >
+    </li><li>
+      <a href="https://www.stpetersucc.net/" target="_blank" rel="noopener"
+        >St. Peter’s United Church of Christ</a
+      >
+    </li>
+  </ul>
+  <h2>Our Mission</h2>
+  <p>
+    In the name of Jesus Christ, we will in unity minister to our communities by
+    offering assistance to those in need of spiritual, physical, and emotional
+    services.
+  </p>
+
+  <h2>Our Goal</h2>
+  <p>
+    The Caring Place was established in 1982 by a coalition of churches serving
+    Golf Manor, Kennedy Heights, Pleasant Ridge, and Silverton. Our goal is to
+    provide services to members of these communities in need of food, clothing,
+    and furniture.
+  </p>
+
+  <h2>Our Policy</h2>
+  <p>
+    The Caring Place is administered by a Board of Directors which includes
+    representatives from local churches. The Director is in charge of the
+    operation of The Caring Place. Volunteers assist in providing services to
+    clients.
+  </p>
+  <p>
+    In accordance with federal law and U.S. Department of Agriculture policy,
+    this institution is prohibited from discriminating on the basis of race,
+    color, national origin, sex, age, disability, religion, or political
+    beliefs.
+  </p>
+</Content>

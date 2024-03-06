@@ -1,16 +1,83 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Button from "../components/Button.astro";
+import Hero from "../components/Hero.astro";
+import Card from "../components/Card.astro";
+import Column from "../components/Column.astro";
+import Columns from "../components/Columns.astro";
+const pageTitle = "Home";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>My Astro Site</h1>
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+  <Hero>
+    <h1>The Caring Place</h1>
+    <h2>Open Tuesday and Thursday 9:00 AM to 2:00 PM</h2>
+    <p>
+      The Caring Place exists to help those in our communities who struggle
+      financially, emotionally or spiritually to develop a more stable
+      lifestyle.
+    </p>
+    <Button link="https://www.facebook.com/thecaringplacekh" variant="white">
+      Visit us on Facebook
+    </Button>
+  </Hero>
+  <article>
+    <section>
+      <header>
+        <h3>Our Services</h3>
+      </header>
+      <Columns>
+        <Card>
+          <h4>Food Pantry</h4>
+          <p>
+            We provide food to those in need in our community. We are open
+            Tuesday and Thursday from 9:00 AM to 2:00 PM.
+          </p>
+          <Button link="/pantry" variant="blue">Learn More</Button>
+        </Card>
+        <Card>
+          <h4>Clothing</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+            sollicitudin ante et arcu imperdiet maximus. Aenean varius consequat
+            interdum.
+          </p>
+          <Button link="/pantry" variant="blue">Learn More</Button>
+        </Card>
+        <Card>
+          <h4>Spiritual</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+            sollicitudin ante et arcu imperdiet maximus. Aenean varius consequat
+            interdum.
+          </p>
+          <Button link="/volunteer" variant="blue">Volunteer</Button>
+        </Card>
+      </Columns>
+    </section>
+    <section>
+      <header>
+        <h3>Help the Caring Place</h3>
+      </header>
+      <Columns>
+        <Card>
+          <h4>Donations</h4>
+          <p>
+            Curabitur dictum augue ipsum. Aliquam at sodales turpis, a varius
+            sem. Proin ultrices accumsan fermentum. Orci varius natoque
+            penatibus et magnis dis parturient montes
+          </p>
+          <Button link="/pantry" variant="blue">Learn More</Button>
+        </Card>
+        <Card>
+          <h4>Volunteers</h4>
+          <p>
+            Our volunteers are the lifeblood of our organization. We are always
+            looking for more help.
+          </p>
+          <Button link="/volunteer" variant="blue">Volunteer</Button>
+        </Card>
+      </Columns>
+    </section>
+  </article>
+</BaseLayout>

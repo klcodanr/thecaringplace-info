@@ -1,0 +1,33 @@
+---
+const { link, variant } = Astro.props;
+const clazz = `button button-${variant}`;
+---
+
+<a href={link} class={clazz}>
+  <slot />
+</a>
+<style>
+  a {
+    text-decoration: none;
+    padding: 0.5em 0.75em;
+    border-radius: 4px;
+    display: inline-block;
+    min-width: 5em;
+    text-align: center;
+    margin: 0.5em;
+  }
+
+  .button-white {
+    color: var(--grey);
+    background-color: var(--text-over-color);
+  }
+
+  .button-blue {
+    color: var(--text-over-color);
+    background-color: var(--blue);
+  }
+
+  .button:hover {
+    filter:brightness(85%);
+  }
+</style>
