@@ -4,9 +4,7 @@
 
 <section class="hero">
   <aside>
-    <div class="hero-content">
-      <slot />
-    </div>
+    <slot />
   </aside>
 </section>
 
@@ -17,8 +15,21 @@
     padding: 2em;
     margin: 0;
     text-align: center;
+    padding-bottom: 6em;
   }
-  .hero-content {
+  .hero :global(h1) {
+    text-transform: uppercase;
+    font-size: xxx-large;
+  }
+  .hero :global(h2) {
+    font-size: xx-large;
+  }
+
+  .hero :global(p) {
+    font-size: x-large;
+    padding-bottom: 1em;
+  }
+  .hero aside {
     display: flex;
     flex-direction: column;
     gap: 0.5em;

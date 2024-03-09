@@ -6,19 +6,15 @@ import logo from "../images/logo.png";
 
 <header>
   <aside>
-    <div class="header-content">
-      <div class="header-logo">
-        <a href="/">
-          <Image src={logo} alt="The Caring Place" loading="eager" />
-        </a>
-      </div>
-      <nav>
-        <Button link="/pantry" variant="white">Food Pantry</Button>
-        <Button link="/about" variant="white">About</Button>
-        <Button link="/volunteer" variant="white">Volunteer</Button>
-        <Button link="/contact" variant="white">Contact</Button>
-      </nav>
-    </div>
+    <a href="/">
+      <Image src={logo} alt="The Caring Place" loading="eager" />
+    </a>
+    <nav>
+      <Button link="/pantry" variant="white">Choice Pantry</Button>
+      <Button link="/about" variant="white">About</Button>
+      <Button link="/volunteer" variant="white">Volunteer</Button>
+      <Button link="/contact" variant="white">Contact</Button>
+    </nav>
   </aside>
 </header>
 <style>
@@ -27,7 +23,7 @@ import logo from "../images/logo.png";
     box-shadow: 0 2px 2px 0 var(--grey);
   }
 
-  .header-content {
+  header aside {
     display: flex;
     flex-direction: row;
     justify-content: space-between;

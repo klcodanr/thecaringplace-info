@@ -5,8 +5,16 @@ import logo from "../images/logo.png";
 
 <footer>
   <aside>
-    <Image src={logo} alt="The Caring Place" />
-    <p>&copy; 2024 The Caring Place</p>
+    <a href="/">
+      <Image src={logo} alt="The Caring Place" loading="eager" />
+    </a>
+    <span>&copy; 2024 The Caring Place</span>
+    <nav>
+      <a href="/pantry">Food Pantry</a>
+      <a href="/about">About</a>
+      <a href="/volunteer">Volunteer</a>
+      <a href="/contact">Contact</a>
+    </nav>
   </aside>
 </footer>
 <style>
@@ -17,7 +25,21 @@ import logo from "../images/logo.png";
     padding: 2em 0;
     margin-top: auto;
   }
-  p {
-    text-align: center;
+  footer aside {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  nav {
+    color: var(--text-over-color);
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+  }
+
+  nav a {
+    color: var(--text-over-color);
+    text-decoration: none;
   }
 </style>
